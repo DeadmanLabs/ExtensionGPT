@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "Background Optimizer",
+    "version": "3.1",
+    "description": "Optimizes moving objects using JavaScript threading",
+    "permissions": ["activeTab", "scripting", "declarativeContent"],
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*",
+                "http://*/*"
+            ],
+            "js": [
+                "selecter.js"
+            ]
+        }
+    ],
+    "commands": {
+        "toggle": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+3",
+                "mac": "Command+Shift+3"
+            },
+            "description": "Toggle the extension on and off"
+        },
+        "_execute_action": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+3",
+                "mac": "Command+Shift+3",
+                "chromeos": "Ctrl+Shift+3",
+                "linux": "Ctrl+Shift+3"
+            }
+        }
+    }
+}
