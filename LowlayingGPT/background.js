@@ -2,7 +2,7 @@ var MOUSE_VISITED_CLASSNAME = 'crx_mouse_visited';
 var prevDOM = null;
 var lastElementChecked = null;
 var running = false;
-var key = "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";
+var key = "<OPENAI-API-KEY-HERE>";
 var url = "https://api.openai.com/v1/chat/completions";
 const headers = {
     'Content-Type': 'application/json',
